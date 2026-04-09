@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "main": "index.mjs",
-  "description": "网易云点歌与歌词查询插件",
+  "description": "NapCat 网易云点歌与歌词查询插件",
   "author": "sanxi",
   "license": "MIT",
   "keywords": [

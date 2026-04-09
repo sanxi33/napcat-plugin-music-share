@@ -9,7 +9,7 @@
 - 支持配置命令前缀，留空后也能直接触发
 - 超时、无结果、歌词缺失时会给出明确提示
 
-## 使用示例
+## 命令
 
 ```text
 球鳖 点歌 稻香
@@ -40,6 +40,13 @@
 2. 在 NapCat 插件管理中导入压缩包
 3. 启用插件并按需修改配置
 
+## 发布产物
+
+发布包包含：
+
+- `index.mjs`
+- `package.json`
+
 ## 开发
 
 这个插件没有构建步骤，源码文件就是发布产物：
@@ -48,11 +55,6 @@
 git clone https://github.com/sanxi33/napcat-plugin-music-share.git
 cd napcat-plugin-music-share
 ```
-
-发布时需要打包以下文件：
-
-- `index.mjs`
-- `package.json`
 
 ## 注意事项
 
