@@ -61,7 +61,10 @@ cd napcat-plugin-music-share
 
 ## 开源检查清单
 
-仓库内置了 [OPEN_SOURCE_CHECKLIST.md](./OPEN_SOURCE_CHECKLIST.md)，后续整理其他插件时可以直接复用。
+仓库内置了两份可复用文档：
+
+- [OPEN_SOURCE_CHECKLIST.md](./OPEN_SOURCE_CHECKLIST.md)：简版核对清单
+- [NAPCAT_PLUGIN_OPEN_SOURCE_WORKFLOW.md](./NAPCAT_PLUGIN_OPEN_SOURCE_WORKFLOW.md)：完整标准流程
 
 ## License
 
