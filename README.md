@@ -59,13 +59,6 @@ cd napcat-plugin-music-share
 - 依赖网易云音乐公开接口，若上游接口调整，插件可能需要更新
 - 某些客户端不支持音乐卡片时，NapCat 侧的兼容效果取决于适配器能力
 
-## 开源检查清单
-
-仓库内置了两份可复用文档：
-
-- [OPEN_SOURCE_CHECKLIST.md](./OPEN_SOURCE_CHECKLIST.md)：简版核对清单
-- [NAPCAT_PLUGIN_OPEN_SOURCE_WORKFLOW.md](./NAPCAT_PLUGIN_OPEN_SOURCE_WORKFLOW.md)：完整标准流程
-
 ## License
 
 MIT
