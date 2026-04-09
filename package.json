@@ -1,0 +1,28 @@
+{
+  "name": "napcat-plugin-music-share",
+  "plugin": "music-share",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "index.mjs",
+  "description": "网易云点歌与歌词查询插件",
+  "author": "sanxi",
+  "license": "MIT",
+  "keywords": [
+    "napcat",
+    "plugin",
+    "qq",
+    "music",
+    "netease-cloud-music"
+  ],
+  "napcat": {
+    "tags": [
+      "娱乐",
+      "工具"
+    ],
+    "minVersion": "4.14.0",
+    "homepage": "https://github.com/sanxi33/napcat-plugin-music-share"
+  },
+  "dependencies": {
+    "napcat-types": "0.0.16"
+  }
+}

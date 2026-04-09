@@ -1,0 +1,5 @@
+{
+  "enabled": true,
+  "commandPrefix": "球鳖",
+  "requestTimeoutMs": 8000
+}
