@@ -211,18 +211,6 @@ export const plugin_onmessage = async (ctx, event) => {
 };
 
 export const plugin_get_config = async () => currentConfig;
-export const plugin_set_config = async (ctx, config) => {
-  currentConfig = sanitizeConfig(config);
-  try {
-    const fs = await import("fs");
-    const path = await import("path");
-    const dir = path.dirname(ctx.configPath);
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(ctx.configPath, JSON.stringify(currentConfig, null, 2), "utf-8");
-  } catch (error) {
-    logger?.error("music-share 保存配置失败", error);
-  }
-};
 export const plugin_on_config_change = async (ctx, ui, key, value, current) => {
   currentConfig = sanitizeConfig(current);
 };
