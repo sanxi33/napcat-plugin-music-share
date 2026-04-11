@@ -1,7 +1,7 @@
 {
   "name": "napcat-plugin-music-share",
   "plugin": "music-share",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "main": "index.mjs",
   "description": "NapCat 网易云点歌与歌词查询插件",

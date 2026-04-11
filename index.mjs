@@ -5,7 +5,7 @@ var EventType = ((EventType2) => {
 
 const DEFAULT_CONFIG = {
   enabled: true,
-  commandPrefix: "球鳖",
+  commandPrefix: "/",
   requestTimeoutMs: 8000
 };
 
@@ -142,7 +142,7 @@ export const plugin_init = async (ctx) => {
   logger = ctx.logger;
   plugin_config_ui = ctx.NapCatConfig.combine(
     ctx.NapCatConfig.boolean("enabled", "启用插件", true, "总开关"),
-    ctx.NapCatConfig.text("commandPrefix", "命令前缀", "球鳖", "例如：球鳖 点歌 稻香；留空表示无前缀"),
+    ctx.NapCatConfig.text("commandPrefix", "命令前缀", "/", "例如：/点歌 稻香；留空表示无前缀"),
     ctx.NapCatConfig.number("requestTimeoutMs", "请求超时(ms)", 8000, "1000-30000")
   );
 
@@ -176,8 +176,8 @@ export const plugin_onmessage = async (ctx, event) => {
       ctx,
       event,
       command.type === "music"
-        ? "要点啥歌呀？示例：球鳖 点歌 稻香"
-        : "要查哪首歌的歌词？示例：球鳖 查看歌词 稻香"
+        ? "要点啥歌呀？示例：/点歌 稻香"
+        : "要查哪首歌的歌词？示例：/查看歌词 稻香"
     );
     return;
   }
