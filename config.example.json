@@ -1,5 +1,5 @@
 {
   "enabled": true,
-  "commandPrefix": "球鳖",
+  "commandPrefix": "/",
   "requestTimeoutMs": 8000
 }
