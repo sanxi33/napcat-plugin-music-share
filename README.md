@@ -1,26 +1,49 @@
 # napcat-plugin-music-share
 
-一个轻量的 NapCat 原生插件，提供网易云音乐点歌和歌词查询能力。
+一个给 NapCat 用的点歌和歌词查询插件。它适合那种“我只想在群里发一句命令，把歌卡片或者歌词贴出来”的场景，不需要你自己再准备 API Key。
 
-## 功能
+## 这份 README 默认把你当作
 
-- `点歌 关键词`：返回网易云音乐分享卡片
-- `查看歌词 关键词`：返回歌曲歌词
-- 支持配置命令前缀，留空后也能直接触发
-- 超时、无结果、歌词缺失时会给出明确提示
+- 已经装好了 NapCat，会导入插件 zip
+- 想在群里快速点歌、查歌词
+- 不想研究源码，也不想额外配置第三方服务
 
-## 命令
+## 这个插件适合谁
 
-```text
-球鳖 点歌 稻香
-球鳖 查看歌词 晴天
-点歌 夜曲
-歌词 七里香
-```
+适合：
 
-## 配置项
+- 想在群里快速分享一首网易云歌曲
+- 想随手查某首歌的歌词
+- 想装完就用，不折腾额外依赖
 
-插件支持以下配置：
+不太适合：
+
+- 想要本地播放器控制的人
+- 想做复杂歌单管理的人
+
+## 装之前要准备什么
+
+基本不需要额外准备。
+
+你只需要决定：
+
+- 要不要保留默认命令前缀 `球鳖`
+
+## 安装
+
+### 1. 下载插件
+
+从 [Releases](https://github.com/sanxi33/napcat-plugin-music-share/releases) 下载：
+
+- `napcat-plugin-music-share.zip`
+
+### 2. 导入 NapCat
+
+在 NapCat 插件管理里导入 zip，并启用插件。
+
+### 3. 先用默认配置
+
+默认配置如下：
 
 ```json
 {
@@ -30,36 +53,55 @@
 }
 ```
 
-- `enabled`：是否启用插件
-- `commandPrefix`：命令前缀，留空表示不需要前缀
-- `requestTimeoutMs`：请求超时时间，范围 `1000-30000`
+大多数人只会改：
 
-## 安装
+- `commandPrefix`
+- `requestTimeoutMs`
 
-1. 下载当前仓库 [Releases](https://github.com/sanxi33/napcat-plugin-music-share/releases) 中的 `napcat-plugin-music-share.zip`
-2. 在 NapCat 插件管理中导入压缩包
-3. 启用插件并按需修改配置
+## 怎么用
 
-## 发布产物
+点歌示例：
 
-发布包包含：
-
-- `index.mjs`
-- `package.json`
-
-## 开发
-
-这个插件没有构建步骤，源码文件就是发布产物：
-
-```bash
-git clone https://github.com/sanxi33/napcat-plugin-music-share.git
-cd napcat-plugin-music-share
+```text
+球鳖 点歌 稻香
+球鳖 来一首 晴天
+球鳖 播放 夜曲
 ```
 
-## 注意事项
+查歌词示例：
 
-- 依赖网易云音乐公开接口，若上游接口调整，插件可能需要更新
-- 某些客户端不支持音乐卡片时，NapCat 侧的兼容效果取决于适配器能力
+```text
+球鳖 查看歌词 七里香
+球鳖 歌词 晴天
+球鳖 查歌词 稻香
+```
+
+如果你把前缀清空，也可以直接发送命令本体。
+
+## 第一次怎么确认自己装好了
+
+建议先发这两条：
+
+```text
+球鳖 点歌 稻香
+球鳖 查看歌词 晴天
+```
+
+如果能返回音乐卡片或歌词文本，就说明插件已经能用了。
+
+## 一键跳到 NapCat WebUI 安装页
+
+如果你的 NapCat 版本是 `4.15.19` 或更高，可以直接点下面按钮跳到插件安装界面：
+
+<a href="https://napneko.github.io/napcat-plugin-index?pluginId=napcat-plugin-music-share" target="_blank">
+  <img src="https://github.com/NapNeko/napcat-plugin-index/blob/pages/button.png?raw=true" alt="在 NapCat WebUI 中打开" width="170">
+</a>
+
+## 已知限制
+
+- 插件依赖公开接口，上游调整时可能需要更新
+- 音乐卡片的显示效果取决于你当前的 QQ 客户端和适配器能力
+- 这个插件负责“发卡片/发歌词”，不是本地播放器
 
 ## License
 
