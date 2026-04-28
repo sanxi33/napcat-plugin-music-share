@@ -1,31 +1,20 @@
 # napcat-plugin-music-share
 
-一个为 NapCat 设计的音乐分享与歌词查询插件。无需自行申请 API Key，安装后即可在群聊中通过命令快速分享音乐卡片或查询歌词。
+在 QQ 群里点歌、查歌词，用的网易云音乐数据。不用申请 API Key，装上就能用。
 
-## 适用场景
+## 下载安装
 
-- 在群聊中快速分享网易云音乐歌曲
-- 查询歌曲歌词并发送到聊天窗口
-- 开箱即用，无需额外配置第三方 API
+去 [Releases](https://github.com/sanxi33/napcat-plugin-music-share/releases) 下载最新的 `napcat-plugin-music-share.zip`，在 NapCat 插件管理里导入并启用就行。
 
-## 环境要求
+NapCat 版本 >= `4.15.19` 的，点这个按钮直接跳转安装页：
 
-- 已部署 NapCat，并了解如何导入插件包 (`.zip`)
-- 无需额外依赖或 API 密钥
+<a href="https://napneko.github.io/napcat-plugin-index?pluginId=napcat-plugin-music-share" target="_blank">
+  <img src="https://github.com/NapNeko/napcat-plugin-index/blob/pages/button.png?raw=true" alt="在 NapCat WebUI 中打开" width="170">
+</a>
 
-## 安装步骤
+## 配置
 
-### 1. 下载插件
-
-前往 [Releases](https://github.com/sanxi33/napcat-plugin-music-share/releases) 页面，下载最新版本的 `napcat-plugin-music-share.zip`。
-
-### 2. 导入 NapCat
-
-在 NapCat 的插件管理界面中导入下载的 zip 文件，并启用插件。
-
-### 3. 默认配置
-
-插件首次运行将使用以下默认配置：
+装上就能用，默认配置基本不用改：
 
 ```json
 {
@@ -35,54 +24,33 @@
 }
 ```
 
-可根据需要修改 `commandPrefix`（命令前缀）和 `requestTimeoutMs`（请求超时时间）。
+如果觉得 `/` 前缀不顺眼，可以把 `commandPrefix` 改成别的，或者设成空字符串——这样直接输命令就行。
 
-> 提示：若将 `commandPrefix` 设置为空字符串，则可以不使用前缀直接输入命令。
+## 命令
 
-## 使用方法
+点歌：
 
-### 点歌
-
-```text
+```
 /点歌 稻香
 /来一首 晴天
 /播放 夜曲
 ```
 
-### 查询歌词
+查歌词：
 
-```text
+```
 /查看歌词 七里香
 /歌词 晴天
 /查歌词 稻香
 ```
 
-命令中的前缀取决于你在配置中设置的 `commandPrefix` 值。
+命令前缀取决于你配置里 `commandPrefix` 设的值。装好以后直接发 `/点歌 稻香` 试试，能返回音乐卡片就算成了。
 
-## 验证安装
+## 注意
 
-发送以下命令测试插件是否正常工作：
-
-```text
-/点歌 稻香
-/查看歌词 晴天
-```
-
-若返回音乐分享卡片或歌词文本，即表示插件已成功运行。
-
-## 快捷安装链接
-
-NapCat 版本 ≥ `4.15.19` 时，可点击下方按钮快速跳转至插件安装页面：
-
-<a href="https://napneko.github.io/napcat-plugin-index?pluginId=napcat-plugin-music-share" target="_blank">
-  <img src="https://github.com/NapNeko/napcat-plugin-index/blob/pages/button.png?raw=true" alt="在 NapCat WebUI 中打开" width="170">
-</a>
-
-## 已知限制
-
-- 插件依赖公开的第三方接口，若上游服务调整可能导致功能异常，届时需更新插件
-- 音乐卡片的渲染效果受 QQ 客户端及适配器能力影响
-- 本插件仅提供音乐信息分享与歌词查询，不具备本地播放控制功能
+- 走的公开第三方接口，上游调整了插件得跟着更新
+- 音乐卡片渲染效果取决于 QQ 客户端和适配器
+- 只做音乐信息分享和歌词查询，没有本地播放功能
 
 ## License
 
